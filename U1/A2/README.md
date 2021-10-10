@@ -70,9 +70,32 @@ Instalamos el servicio `SSH`.
 
 ![](img/026.png)
 
-### 5.-
+### 5.- Configuración de la seguridad post-instalación.
 
-![](img/028.png)
+![](img/055.png)
+
+Configuramos el script de este modo:
+
+- Comprueba que el usuario root tiene una contraseña.
+
+![](img/056.png)
+
+- Permite eliminar los usuarios anónimos.
+
+- Elimina la cuenta root remota.
+
+- Elimina la base test de pruebas.
+
+![](img/057.png)
+
+- Permite recargar los privilegios.
+
+
+![](img/058.png)
+
+Ejecuta esta consulta: `select user, host, plugin from mysql.user;`
+
+![](img/059.png)
 
 ### 6.- Modificar BD MySQL
 
@@ -137,3 +160,49 @@ El usuario root nos denegaba la password y tenemos que implementar una nueva.
 ![](img/053.png)
 
 ![](img/054.png)
+
+### 9.- Preguntas
+
+![](img/060.png)
+
+#### 9.1 Directorio de instalación base
+
+Se encuentra dentro de `/usr/bin`, filtraremos por "mysql"
+
+![](img/061.png)
+
+Si ejecutamos el comando `sudo mysqladmin -u root -p shutdown`, apagaremos el servicio para iniciar como usuario root en mysql.
+
+![](img/062.png)
+
+Para revocar esta accion ejecutamos el comando `/etc/init.d/mysql start`.
+
+![](img/063.png)
+
+![](img/064.png)
+
+#### 9.2 Directorio del servicio
+
+Esto se encuentra en `init.d` como comprobamos en apartados anteriores cuando apagamos y encendemos el servicio.
+
+![](img/065.png)
+
+![](img/066.png)
+
+#### 9.3 Directorio de los datos
+
+Este directorio se encuentra en `/var/lib` dentro de `mysql`.
+
+![](img/067.png)
+
+#### 9.4 Fichero de configuracion del servidor
+
+Dentro de `/etc/mysql` esta el archivo `my.cnf`.
+
+![](img/068.png)
+
+![](img/069.png)
+
+#### 9.5 Propietario de la BD
+
+![](img/070.png)
