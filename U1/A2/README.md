@@ -202,7 +202,3 @@ Dentro de `/etc/mysql` esta el archivo `my.cnf`.
 ![](img/068.png)
 
 ![](img/069.png)
-
-#### 9.5 Propietario de la BD
-
-![](img/070.png)
